@@ -112,23 +112,23 @@
 
             <div class="wel-grids">
                 <div class="col-md-3 wel-grid">
-                    <img src="images/f1.jpg" class="img-responsive gray" alt=""/>
+                    <a href="/accommodation"><img src="images/f1.jpg" class="img-responsive gray" alt=""/></a>
                     <h4>Phòng ở </h4>
                     <p>Tận hưởng phòng ở thượng hạng tại khách sạn Valkyria.
                     </p>
                 </div>
                 <div class="col-md-3 wel-grid">
-                    <img src="images/f2.jpg" class="img-responsive gray" alt=""/>
+                    <a href="/apartment"><img src="images/f2.jpg" class="img-responsive gray" alt=""/></a>
                     <h4>Căn hộ </h4>
                     <p> Tận hưởng dịch vụ căn hộ đẳng cấp, hiện đại, tiện nghi.</p>
                 </div>
                 <div class="col-md-3 wel-grid">
-                    <img src="images/f3.jpg" class="img-responsive gray" alt=""/>
+                    <a href="/event"><img src="images/f3.jpg" class="img-responsive gray" alt=""/></a>
                     <h4>Tổ chức sự kiện</h4>
                     <p>Tổ chức Hội nghị, Hội thảo, Sự kiện và Tiệc cưới theo cách chuyên nghiệp.</p>
                 </div>
                 <div class="col-md-3 wel-grid">
-                    <img src="images/f4.jpg" class="img-responsive gray" alt=""/>
+                    <a href="/restaurant"><img src="images/f4.jpg" class="img-responsive gray" alt=""/></a>
                     <h4>Nhà hàng sang trọng</h4>
                     <p>Tận hưởng tinh hoa và đẳng cấp ẩm thực bậc nhất.</p>
                 </div>

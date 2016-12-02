@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
-Route::get('/home', function () {
-    return view('home.index');
-});
+Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
 
+Route::get('/accommodation', 'AccommodationController@index');
+Route::get('/apartment', 'ApartmentController@index');
+Route::get('/event', 'EventController@index');
+Route::get('/restaurant', 'RestaurantController@index');

@@ -37,7 +37,7 @@
                 <ul>
                     <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i> Office : 0041-456-3692</li>
                     <li><i class="glyphicon glyphicon-phone" aria-hidden="true"></i> Mobile : 0200-123-4567</li>
-                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email: <a href="#"><a href="mailto:thuyninh.esc@gmail.com">thuyninh.esc@gmail.com</a></a></li>
+                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email: <a href="#"><a href="mailto:thuyninh.esc@gmail.com">support@valkyria.com</a></a></li>
                     <li><i class="glyphicon glyphicon-print" aria-hidden="true"></i> Fax : 0091-789-456100</li>
                 </ul>
             </div>
