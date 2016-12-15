@@ -16,7 +16,6 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     protected $namespace = 'App\Http\Controllers';
-    public $tab = 0;
     /**
      * Define your route model bindings, pattern filters, etc.
      *
@@ -25,7 +24,6 @@ class RouteServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        View::share ( 'tab', $this->tab );
 
         parent::boot();
     }
