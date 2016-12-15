@@ -6,9 +6,10 @@
     <script src="{!! asset('js/jquery-1.12.4.js') !!}"></script>
     <script src="{!! asset('js/jquery.min.js') !!}"></script>
     <script src="{!! asset('js/bootstrap.min.js') !!}"></script>
-    
-    <link rel="stylesheet" href="{!! asset('css/style.css') !!}" type="text/css" media="screen" />
+
     <link rel="stylesheet" href="{!! asset('css/bootstrap.css') !!}" type="text/css" media="screen" />
+
+    <link rel="stylesheet" href="{!! asset('css/style.css') !!}" type="text/css" media="screen" />
     <link rel="stylesheet" href="{!! asset('css/flexslider.css') !!}" type="text/css" media="screen" />
     <link rel="stylesheet" href="{!! asset('css/jquery-ui.css') !!}" type="text/css" media="screen" />
 
