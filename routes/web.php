@@ -21,3 +21,4 @@ Route::get('/restaurant', 'RestaurantController@index');
 
 Auth::routes();
 
+Route::get('customer/{id}/index', 'CustomerServiceController@index');

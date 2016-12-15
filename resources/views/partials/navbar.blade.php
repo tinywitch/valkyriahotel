@@ -16,56 +16,93 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                @if ($tab == 1)
-                    <li class="active"><a href="/" data-hover="Home">Trang chủ </a></li>
-                @else
-                    <li class=""><a href="/" data-hover="Home">Trang chủ </a></li>
-                @endif
-                @if ($tab == 2)
-                    <li class="active"><a data-hover="Phòng ở" href="/accommodation">Phòng ở</a></li>
-                @else
-                    <li><a data-hover="Phòng ở" href="/accommodation">Phòng ở</a></li>
-                @endif
-                @if ($tab == 3)
-                    <li class="active"><a data-hover="Tổ chức sự kiện" href="/event">Tổ chức sự kiện</a></li>
-                @else
-                    <li><a data-hover="Tổ chức sự kiện" href="/event">Tổ chức sự kiện</a></li>
-                @endif
-
-                @if (Auth::guest())
-                    @if($tab == 4)
-                        <li class="active"><a href="{{ url('/login') }}">Đăng nhập</a></li>
+                @if ($tab != 0)
+                    @if ($tab == 1)
+                        <li class="active"><a href="/" data-hover="Home">Trang chủ </a></li>
                     @else
-                        <li><a href="{{ url('/login') }}">Đăng nhập</a></li>
+                        <li class=""><a href="/" data-hover="Home">Trang chủ </a></li>
                     @endif
-                    @if ($tab == 5)
-                        <li class="active"><a href="{{ url('/register') }}">Đăng ký</a></li>
+                    @if ($tab == 2)
+                        <li class="active"><a data-hover="Phòng ở" href="/accommodation">Phòng ở</a></li>
                     @else
-                        <li><a href="{{ url('/register') }}">Đăng ký</a></li>
+                        <li><a data-hover="Phòng ở" href="/accommodation">Phòng ở</a></li>
+                    @endif
+                    @if ($tab == 3)
+                        <li class="active"><a data-hover="Tổ chức sự kiện" href="/event">Tổ chức sự kiện</a></li>
+                    @else
+                        <li><a data-hover="Tổ chức sự kiện" href="/event">Tổ chức sự kiện</a></li>
                     @endif
 
-                @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
+                    @if (Auth::guest())
+                        @if($tab == 4)
+                            <li class="active"><a href="{{ url('/login') }}">Đăng nhập</a></li>
+                        @else
+                            <li><a href="{{ url('/login') }}">Đăng nhập</a></li>
+                        @endif
+                        @if ($tab == 5)
+                            <li class="active"><a href="{{ url('/register') }}">Đăng ký</a></li>
+                        @else
+                            <li><a href="{{ url('/register') }}">Đăng ký</a></li>
+                        @endif
 
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="{{ url('/logout') }}"
-                                   onclick="event.preventDefault();
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="/customer/{{Auth::user()->id}}/index">Quản lý</a>
+                                    <a href="{{ url('/logout') }}"
+                                       onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    Thoát
-                                </a>
+                                        Thoát
+                                    </a>
 
-                                <form id="logout-form" action="{{ url('/logout') }}" method="POST"
-                                      style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
+                                    <form id="logout-form" action="{{ url('/logout') }}" method="POST"
+                                          style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    @endif
+                @else
+                        <li class=""><a href="/" data-hover="Home">Trang chủ </a></li>
+                        <li><a data-hover="Phòng ở" href="/accommodation">Phòng ở</a></li>
+                        <li><a data-hover="Tổ chức sự kiện" href="/event">Tổ chức sự kiện</a></li>
+
+                    @if (Auth::guest())
+                            <li><a href="{{ url('/login') }}">Đăng nhập</a></li>
+                            <li><a href="{{ url('/register') }}">Đăng ký</a></li>
+
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{ url('/logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        Thoát
+                                    </a>
+
+                                    <form id="logout-form" action="{{ url('/logout') }}" method="POST"
+                                          style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    @endif
                 @endif
+
 
             </ul>
         </div><!-- /.navbar-collapse -->

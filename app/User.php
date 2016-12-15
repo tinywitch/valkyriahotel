@@ -18,7 +18,7 @@ class User extends Authenticatable
         'name', 'email','password',  'mobile', 'address', 'role'
     ];
 
-    public function order()
+    public function orders()
     {
         return $this->hasMany('App\Order');
     }

@@ -2,12 +2,12 @@
 <html>
 <head>
     <title>Hanoi Valkyria</title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Custom Theme files -->
-    <!--theme-style-->
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+    <link rel="stylesheet" href="{!! asset('css/bootstrap.css') !!}" type="text/css" media="screen" />
+
+    <script src="{!! asset('js/jquery.min.js') !!}"></script>
+    <link rel="stylesheet" href="{!! asset('css/style.css') !!}" type="text/css" media="screen" />
+
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,9 +20,9 @@
     </script>
 
     <!---->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{!! asset('js/bootstrap.min.js') !!}"></script>
     <link href="https://fonts.googleapis.com/css?family=Tinos" rel="stylesheet"><!---->
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{!! asset('css/flexslider.css') !!}" type="text/css" media="screen" />
 </head>
 <body>
 @yield('insidesection')
