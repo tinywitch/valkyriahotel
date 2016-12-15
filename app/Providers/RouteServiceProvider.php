@@ -4,10 +4,6 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-<<<<<<< HEAD
-=======
-use Illuminate\Support\Facades\View;
->>>>>>> 5ad7e0910da5dc173f1463346ea9d78abf1eb964
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -19,11 +15,6 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     protected $namespace = 'App\Http\Controllers';
-<<<<<<< HEAD
-
-=======
-    public $tab = 0;
->>>>>>> 5ad7e0910da5dc173f1463346ea9d78abf1eb964
     /**
      * Define your route model bindings, pattern filters, etc.
      *
@@ -32,11 +23,6 @@ class RouteServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-<<<<<<< HEAD
-=======
-        View::share ( 'tab', $this->tab );
->>>>>>> 5ad7e0910da5dc173f1463346ea9d78abf1eb964
-
         parent::boot();
     }
 

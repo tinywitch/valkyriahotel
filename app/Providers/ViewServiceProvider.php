@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class ViewServiceProvider extends ServiceProvider
@@ -11,9 +12,14 @@ class ViewServiceProvider extends ServiceProvider
      *
      * @return void
      */
+
+    public $tab = 0;
+
+
     public function boot()
     {
-        //
+        View::share ( 'tab', $this->tab );
+
     }
 
     /**
