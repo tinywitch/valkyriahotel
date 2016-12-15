@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-Phòng ở
+    Quản lý ng dùng {{$customer->name}}
 
 @endsection

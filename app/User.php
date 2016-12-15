@@ -15,10 +15,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'mobile', 'address', 'role'
+
+        'name', 'email','password',  'mobile', 'address', 'role'
     ];
 
-    public function order()
+    public function orders()
     {
         return $this->hasMany('App\Order');
     }

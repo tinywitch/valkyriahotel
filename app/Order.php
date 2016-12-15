@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     protected $fillable = [
-        'id', 'room_id', 'begin', 'end', 'user_id', 'status'
+        'room_id', 'begin', 'end', 'user_id', 'status'
     ];
 
     public function room()

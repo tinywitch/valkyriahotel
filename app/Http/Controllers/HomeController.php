@@ -13,8 +13,9 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $tab = 1;
         $types = Type::select('id', 'name')->get()->toArray();
-        return view('home.index', compact('types'));
+        return view('home.index', compact('types','tab'));
     }
 
     public function result(OrderRequest $request){
@@ -64,5 +65,13 @@ class HomeController extends Controller
         $room->available = 0;
         $room->save();
         return redirect()->to('/')->with(['flash_level'=>'success' ,'flash_message'=>'Success !! Complete Add Order Room']);
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+//        $this->middleware('auth');
     }
-}
+

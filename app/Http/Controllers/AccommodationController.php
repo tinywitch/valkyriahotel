@@ -8,7 +8,8 @@ class AccommodationController extends Controller
 {
     public function index()
     {
-        return view('accommodation.index');
+        $tab = 2;
+        return view('accommodation.index', compact('tab'));
 
     }
 }
