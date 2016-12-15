@@ -6,13 +6,13 @@
     <div class="header">
         <div class="container">
             <div class="header-menu">
+
                @include('partials.navbar')
                 <div class="clearfix"></div>
             </div>
         </div>
     </div>
 
-    <!---header--->
     <div class="content" style="padding: 50px">
         @yield('content')
     </div>

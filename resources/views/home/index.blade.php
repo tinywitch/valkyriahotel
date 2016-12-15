@@ -61,62 +61,53 @@
     <div class="header " >
         <div class="container">
             <div class="header-menu">
-                {{--<nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <div class="navbar-brand logo">
-                                <h1><a href="index.html"><span>Valkyria  </span> Hotel</a></h1>
-                            </div>
-                        </div>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a href="/" data-hover="Home">Trang chủ </a></li>
-                                <li><a data-hover="Phòng ở" href="/accommodation">Phòng ở</a></li>
-                                <li><a data-hover="Tổ chức sự kiện" href="/event">Tổ chức sự kiện</a></li>
-                                @if (Auth::guest())
-                                    <li><a href="{{ url('/login') }}">Đăng ký</a></li>
-                                    <li><a href="{{ url('/register') }}">Đăng nhập</a></li>
-                                @else
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                            {{ Auth::user()->name }} <span class="caret"></span>
-                                        </a>
 
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li>
-                                                <a href="{{ url('/logout') }}"
-                                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                                    Logout
-                                                </a>
-
-                                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                                    {{ csrf_field() }}
-                                                </form>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                @endif
-
-                            </ul>
-                        </div><!-- /.navbar-collapse -->
-                    </div><!-- /.container-fluid -->
-                </nav>
-                <div class="clearfix"></div>--}}
                 @include('partials.navbar')
             </div>
         </div>
     </div>
     <div class="welcome">
+        <div class="container">
+            @include('blocks.error')
+            @include('blocks.message')
+        <div class="container col-lg-3">
+            <form action="{!! route('postResult') !!}" method="POST">
+                <input type="hidden" name="_token" value="{!! csrf_token() !!}"/>
+                <div class="form-group">
+                    <label>Check In</label>
+                    <input id="datepickerin" class="form-control" name="txtDateIn" placeholder="Please Enter Date Input" />
+                </div>
+                <div class="form-group">
+                    <label>Check Out</label>
+                    <input id="datepickerout" class="form-control" name="txtDateOut" placeholder="Please Enter Date Input" />
+                </div>
+                <div class="form-group">
+                    <label>Check Out</label>
+                    <input id="datepickerabc" class="form-control" name="txtDateaaa" placeholder="Please Enter Date Input" />
+                </div>
+                <div class="form-group">
+                    <label>Type Of Room</label>
+                    <select class="form-control" name="sltType">
+                        <option value="0">Please Type Room</option>
+                        @foreach($types as $item_type)
+                            <option value="{!! $item_type['id'] !!}">{!! $item_type['name'] !!}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Number Of People</label>
+                    <select class="form-control" name="sltNumber">
+                        <option value="0">Please Choose Number</option>
+                        @for($i = 1; $i < 11; $i++)
+                            <option value="{!! $i !!}">{!! $i !!}</option>
+                        @endfor
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-default">Category Add</button>
+                <button type="reset" class="btn btn-default">Reset</button>
+            </form>
+        </div>
+        </div>
         <div class="container">
             <h2 class="tittle">Chào mừng quý khách đến với Valkyria</h2>
             <p class="wel text">Tọa lại tại vị trí đắc địa của thủ đô, nơi gần các trung tâm văn hóa, thương

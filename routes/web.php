@@ -19,6 +19,8 @@ Route::get('/apartment', 'ApartmentController@index');
 Route::get('/event', 'EventController@index');
 Route::get('/restaurant', 'RestaurantController@index');
 
+Route::post('/result', ['as'=>'postResult', 'uses'=>'HomeController@result']);
+Route::get('/order/{id}/{date_in}/{date_out}/{user_id}', ['as'=>'getOrder', 'uses'=>'HomeController@order']);
 Auth::routes();
 
 Route::get('customer/{id}/index', 'CustomerServiceController@index');

@@ -3,12 +3,16 @@
 <head>
     <title>Hanoi Valkyria</title>
 
-    <link rel="stylesheet" href="{!! asset('css/bootstrap.css') !!}" type="text/css" media="screen" />
-
+    <script src="{!! asset('js/jquery-1.12.4.js') !!}"></script>
     <script src="{!! asset('js/jquery.min.js') !!}"></script>
+    <script src="{!! asset('js/bootstrap.min.js') !!}"></script>
+    
     <link rel="stylesheet" href="{!! asset('css/style.css') !!}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{!! asset('css/bootstrap.css') !!}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{!! asset('css/flexslider.css') !!}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{!! asset('css/jquery-ui.css') !!}" type="text/css" media="screen" />
 
-    <!--//theme-style-->
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta property="og:title" content="Valkyria" />
@@ -19,10 +23,7 @@
         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
     </script>
 
-    <!---->
-    <script src="{!! asset('js/bootstrap.min.js') !!}"></script>
     <link href="https://fonts.googleapis.com/css?family=Tinos" rel="stylesheet"><!---->
-    <link rel="stylesheet" href="{!! asset('css/flexslider.css') !!}" type="text/css" media="screen" />
 </head>
 <body>
 @yield('insidesection')
@@ -63,6 +64,7 @@
     </div>
 </div>
 <!--footer-->
-
+<script src="js/jquery-ui.js"></script>
+<script src="{{ url('js/myscript.js') }}"></script>
 </body>
 </html>
