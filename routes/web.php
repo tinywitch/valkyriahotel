@@ -18,3 +18,6 @@ Route::get('/accommodation', 'AccommodationController@index');
 Route::get('/apartment', 'ApartmentController@index');
 Route::get('/event', 'EventController@index');
 Route::get('/restaurant', 'RestaurantController@index');
+
+Auth::routes();
+

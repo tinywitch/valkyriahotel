@@ -8,7 +8,8 @@ class EventController extends Controller
 {
     public function index()
     {
-        return view('event.index');
+        $tab = 3;
+        return view('event.index', compact('tab'));
 
     }
 }
