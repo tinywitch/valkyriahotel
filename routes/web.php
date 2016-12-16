@@ -42,6 +42,42 @@ Route::group(['middleware' => ['auth', 'role'], 'role' => 'admin'], function () 
     Route::post('/admin/service/save', 'Admin\ServiceController@save');
 });
 
+Route::get('/cart', function () {
+    return view('cart.index');
+});
+
+
+/*
+Route::get('/cart', [
+    'uses' => 'ServiceController@getCart',
+    'as' => 'cart.index'
+]);
+
+*/
+
+
+Route::post('/result', ['as'=>'postResult', 'uses'=>'HomeController@result']);
+Route::get('/order/{id}/{date_in}/{date_out}/{user_id}', ['as'=>'getOrder', 'uses'=>'HomeController@order']);
+Auth::routes();
+
+Route::get('service/{id}/index', [
+	'uses'=>'ServiceController@getIndex',
+	'as'=>'service.index'
+	]);
+
+
+Route::get('/add-to-cart/{id}', [
+    'uses' => 'ServiceController@getAddToCart',
+    'as' => 'service.addToCart'
+]);
+
+Route::get('/service-cart', [
+    'uses' => 'ServiceController@getCart',
+    'as' => 'service.serviceCart'
+]);
+
+
+
 
 
 
