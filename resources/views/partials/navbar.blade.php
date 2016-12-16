@@ -48,9 +48,13 @@
                                     @if(Auth::user()->role == "admin")
                                         <a href="/admin/orderservicemanager">Quản lý khách sạn</a>
                                     @else
-                                        <a href="/customer/{{Auth::user()->id}}/index">Quản lý</a>
+                                        <a href="/service/{{Auth::user()->id}}/index">
+                                            Dịch Vụ
+                                        </a>
+                                        <a href="/cart">Giỏ hàng</a>
                                     @endif
-                                        <a href="{{ url('/logout') }}"
+
+                                    <a href="{{ url('/logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         Thoát
@@ -69,6 +73,7 @@
                         <li><a data-hover="Phòng ở" href="/accommodation">Phòng ở</a></li>
                         <li><a data-hover="Tổ chức sự kiện" href="/event">Tổ chức sự kiện</a></li>
 
+
                     @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Đăng nhập</a></li>
                             <li><a href="{{ url('/register') }}">Đăng ký</a></li>
@@ -82,6 +87,9 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li>
+
+                                    <a href="/service/{{Auth::user()->id}}/index">Dịch vụ</a>
+                                    <a href="/cart">Giỏ hàng</a>
                                     <a href="{{ url('/logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
