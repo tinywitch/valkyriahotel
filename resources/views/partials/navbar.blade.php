@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
             </button>
             <div class="navbar-brand logo">
-                <h1><a href="index.html"><span>Valkyria  </span> Hotel</a></h1>
+                <h1><a href="/"><span>Valkyria  </span> Hotel</a></h1>
             </div>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -22,16 +22,7 @@
                     @else
                         <li class=""><a href="/" data-hover="Home">Trang chủ </a></li>
                     @endif
-                    @if ($tab == 2)
-                        <li class="active"><a data-hover="Phòng ở" href="/accommodation">Phòng ở</a></li>
-                    @else
-                        <li><a data-hover="Phòng ở" href="/accommodation">Phòng ở</a></li>
-                    @endif
-                    @if ($tab == 3)
-                        <li class="active"><a data-hover="Tổ chức sự kiện" href="/event">Tổ chức sự kiện</a></li>
-                    @else
-                        <li><a data-hover="Tổ chức sự kiện" href="/event">Tổ chức sự kiện</a></li>
-                    @endif
+
 
                     @if (Auth::guest())
                         @if($tab == 4)
@@ -54,8 +45,12 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="/customer/{{Auth::user()->id}}/index">Quản lý</a>
-                                    <a href="{{ url('/logout') }}"
+                                    @if(Auth::user()->role == "admin")
+                                        <a href="/admin/orderservicemanager">Quản lý khách sạn</a>
+                                    @else
+                                        <a href="/customer/{{Auth::user()->id}}/index">Quản lý</a>
+                                    @endif
+                                        <a href="{{ url('/logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         Thoát

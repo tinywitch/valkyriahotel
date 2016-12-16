@@ -81,30 +81,27 @@
                     <label>Check Out</label>
                     <input id="datepickerout" class="form-control" name="txtDateOut" placeholder="Please Enter Date Input" />
                 </div>
-                <div class="form-group">
-                    <label>Check Out</label>
-                    <input id="datepickerabc" class="form-control" name="txtDateaaa" placeholder="Please Enter Date Input" />
-                </div>
+
                 <div class="form-group">
                     <label>Type Of Room</label>
                     <select class="form-control" name="sltType">
-                        <option value="0">Please Type Room</option>
+                        <option value="0">Chọn loại phòng</option>
                         @foreach($types as $item_type)
                             <option value="{!! $item_type['id'] !!}">{!! $item_type['name'] !!}</option>
                         @endforeach
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Number Of People</label>
+                    <label>Số người</label>
                     <select class="form-control" name="sltNumber">
-                        <option value="0">Please Choose Number</option>
+                        <option value="0">Chọn số người</option>
                         @for($i = 1; $i < 11; $i++)
                             <option value="{!! $i !!}">{!! $i !!}</option>
                         @endfor
                     </select>
                 </div>
-                <button type="submit" class="btn btn-default">Category Add</button>
-                <button type="reset" class="btn btn-default">Reset</button>
+                <button type="submit" class="btn btn-default">Đặt phòng</button>
+                <button type="reset" class="btn btn-default">Nhập lại form</button>
             </form>
         </div>
         </div>
